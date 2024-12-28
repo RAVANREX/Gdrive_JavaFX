@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500" prefWidth="800" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gdrive.FXMLController">
+
+    <!-- Email Field -->
+    <HBox layoutX="10.0" layoutY="10.0" spacing="10">
+        <Label text="Folder ID:" />
+        <TextField fx:id="emailField" promptText="Enter your email recommended without special char" />
+    </HBox>
+
+
+
+        <!-- Time Interval in hour Field -->
+    <HBox layoutX="290.0" layoutY="50.0" spacing="10">
+        <Label text="Time Interval in hour" />
+        <TextField fx:id="timeInvField" promptText="Enter your Interval in hour:" text=""/>
+    </HBox>
+    <!-- Save Path for Download -->
+    <HBox layoutX="250.0" layoutY="90.0" spacing="10">
+        <Label text="Download Save Path:" />
+        <TextField fx:id="downloadPathField" promptText="Choose save location" />
+        <Button fx:id="browsePathButton" text="Browse" onAction="#browseSaveFolder" />
+    </HBox>
+
+    <!-- Toggle Switch for Upload/Download Mode -->
+    <HBox layoutX="10.0" layoutY="90.0" spacing="10" alignment="CENTER_LEFT">
+        <Label text="Mode:" />
+        <StackPane>
+            <ToggleButton fx:id="modeSwitch" styleClass="switch-button" text="Download" selected="true" onAction="#toggleModeAction" />
+        </StackPane>
+    </HBox>
+
+    <!-- File Browse and Select -->
+    <VBox layoutX="10.0" layoutY="130.0" spacing="10">
+        <Label text="Select Files to Upload:" />
+        <HBox spacing="10">
+            <Button fx:id="browseFilesButton" text="Browse Files" onAction="#browseMultipleFiles"/>
+            <ListView fx:id="fileListView" prefHeight="100" onMouseClicked="#handleFileDoubleClick"/>
+        </HBox>
+    </VBox>
+
+    
+
+    <!-- Save and Start Buttons -->
+    <HBox layoutX="10.0" layoutY="280.0" spacing="10">
+        <Button fx:id="saveButton" text="Save"  onAction="#handleSaveButtonAction"/>
+        <Button fx:id="startButton" text="Start" onAction="#handleStartButtonAction"/>
+        <Button fx:id="stopButton" text="Stop" onAction="#handleStopButtonAction"/>
+    </HBox>
+
+
+</AnchorPane>

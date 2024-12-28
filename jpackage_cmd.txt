@@ -1,0 +1,1 @@
+jpackage --type msi --name UDApp --app-version 0.0.1 --input C:\Users\USER\Desktop\Projects\driveproject\gdrive\artifact\out --main-jar gdrive_jar.jar --main-class com.gdrive.GdriveApp --icon C:\Users\USER\Downloads\xrp_crypto_icon_264356.ico --dest C:\Users\USER\Desktop\Projects\driveproject --description "JavaFX UD application" --vendor "Company" --win-dir-chooser --win-menu
